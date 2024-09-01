@@ -1,0 +1,29 @@
+[package]
+name = "libroxy-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+log = "0.4.22"
+reqwest = { version = "0", optional = true }
+url = { version = "2" }
+
+[features]
+default = [
+    "env",
+    "gnome",
+    "windows",
+    "sysconfig",
+    "osx",
+    "kde",
+    "xdp",
+    "reqwest",
+]
+env = []
+gnome = []
+windows = []
+sysconfig = []
+osx = []
+kde = []
+xdp = []
+reqwest = ["dep:reqwest"]
